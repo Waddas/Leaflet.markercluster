@@ -9,6 +9,10 @@ export var MarkerClusterGroup = L.MarkerClusterGroup = L.FeatureGroup.extend({
 		iconCreateFunction: null,
 		clusterPane: L.Marker.prototype.options.pane,
 
+
+		// Setting to ensure we zoom to bound before spiderfy
+		zoomToSpiderfy: false,
+
 		spiderfyOnMaxZoom: true,
 		showCoverageOnHover: true,
 		zoomToBoundsOnClick: true,
@@ -855,8 +859,10 @@ export var MarkerClusterGroup = L.MarkerClusterGroup = L.FeatureGroup.extend({
 		var cluster = e.layer,
 		    bottomCluster = cluster;
 
-		while (bottomCluster._childClusters.length === 1) {
-			bottomCluster = bottomCluster._childClusters[0];
+		if (!this.options.zoomToSpiderfy) {
+			while (bottomCluster._childClusters.length === 1) {
+				bottomCluster = bottomCluster._childClusters[0];
+			}
 		}
 
 		if (bottomCluster._zoom === this._maxZoom &&

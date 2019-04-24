@@ -1,6 +1,6 @@
 {
 	"name": "leaflet.markercluster",
-	"repository": "https://github.com/Leaflet/Leaflet.markercluster",
+	"repository": "https://github.com/Waddas/Leaflet.markercluster",
 	"version": "1.4.1",
 	"description": "Provides Beautiful Animated Marker Clustering functionality for Leaflet",
 	"devDependencies": {
