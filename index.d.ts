@@ -41,6 +41,11 @@ declare module 'leaflet' {
         zoomToBoundsOnClick?: boolean;
 
         /*
+        * Force zoom to bounds when clicking a cluster which triggers a spiderfy
+        */
+        zoomToSpiderfy?: boolean;
+
+        /*
         * When you click a cluster at the bottom zoom level we spiderfy it
         * so you can see all of its markers.
         */

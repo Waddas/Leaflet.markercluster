@@ -1,7 +1,7 @@
 {
 	"name": "waddas.markercluster",
 	"repository": "https://github.com/Waddas/Leaflet.markercluster",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"description": "Provides Beautiful Animated Marker Clustering functionality for Leaflet",
 	"devDependencies": {
 		"@types/leaflet": "^1.4.4",
